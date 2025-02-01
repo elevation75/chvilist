@@ -17,16 +17,16 @@ A modern GUI python script to view Erik Dubois' latest YouTube videos via RSS fe
 from the terminal:
 ```
 git clone https://github.com/elevation75/chvilist.git
-cd chvilist.
+cd chvilist
 pip install -r requirements.txt
 ```
 ## Usage
 `
-python3 yt_viewer.py
+python3 file_name.py
 `
 or<br>
 ``
-chmod +x file_name.py<br>
+chmod +x file_name.py <br>
 ./file_name.py
 ``
 

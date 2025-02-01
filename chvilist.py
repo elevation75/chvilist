@@ -37,7 +37,7 @@ class AboutWindow(Toplevel):
         main_frame = ttk.Frame(self, style='VideoFrame.TFrame')
         main_frame.pack(fill=BOTH, expand=True, padx=10, pady=10)
         
-        ttk.Label(main_frame, text="YouTube RSS Viewer", 
+        ttk.Label(main_frame, text="CHVILIST", 
                 font=('Roboto', 12, 'bold'), style='Custom.TLabel').pack(pady=10)
         
         info_text = (

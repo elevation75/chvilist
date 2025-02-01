@@ -1,6 +1,6 @@
 # YouTube RSS Viewer - CHVILIST
 
-A modern GUI application to view Erik Dubois' latest YouTube videos via RSS feed.
+A modern GUI python script to view Erik Dubois' latest YouTube videos via RSS feed.
 
 ## Features
 - Dark theme UI

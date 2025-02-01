@@ -43,8 +43,8 @@ class AboutWindow(Toplevel):
         info_text = (
             "Version: 0.1\n"
             "Author: elevation75\n"
-            "Description: A smart method to have latest videos posted\n"
-            "for Erik Dubois' channel"
+            "Description: A smart method to find and watch latest videos posted\n"
+            "for Erik Dubois channel"
         )
         ttk.Label(main_frame, text=info_text, style='Custom.TLabel').pack(pady=5)
         
@@ -111,7 +111,7 @@ class StyledVideoFrame(ttk.Frame):
 class ModernYTViewer(Tk):
     def __init__(self):
         super().__init__()
-        self.title("Erik Dubois YouTube Viewer")
+        self.title("Erik Dubois YouTube Latest Posts Viewer")
         self.geometry("900x700+100+100")
         self.configure(background=COLORS['background'])
         self.setup_styles()
@@ -146,7 +146,7 @@ class ModernYTViewer(Tk):
         
         title_frame = ttk.Frame(header_frame, style='VideoFrame.TFrame')
         title_frame.pack(side=LEFT, padx=20)
-        ttk.Label(title_frame, text="Erik Dubois' Latest Videos", 
+        ttk.Label(title_frame, text="Erik Dubois Youtube Latest Posts Viewer (15)", 
                 font=('Roboto', 16, 'bold'), style='Custom.TLabel').pack()
         
         btn_container = ttk.Frame(header_frame, style='VideoFrame.TFrame')

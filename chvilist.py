@@ -13,7 +13,7 @@ import os
 
 CHANNEL_RSS = "https://www.youtube.com/feeds/videos.xml?channel_id=UCJdmdUp5BrsWsYVQUylCMLg"
 MAX_ITEMS = 15
-THUMBNAIL_SIZE = (200, 112)
+THUMBNAIL_SIZE = (250, 162)
 GITHUB_URL = "https://github.com/elevation75/chvilist"
 COLORS = {
     'background': '#2D2D2D',
@@ -28,7 +28,7 @@ class AboutWindow(Toplevel):
     def __init__(self, parent):
         super().__init__(parent)
         self.title("About")
-        self.geometry("400x250")
+        self.geometry("450x280")
         self.configure(background=COLORS['background'])
         self.resizable(False, False)
         self.create_widgets()
@@ -38,7 +38,7 @@ class AboutWindow(Toplevel):
         main_frame.pack(fill=BOTH, expand=True, padx=10, pady=10)
         
         ttk.Label(main_frame, text="YouTube RSS Viewer", 
-                font=('Roboto', 14, 'bold'), style='Custom.TLabel').pack(pady=10)
+                font=('Roboto', 12, 'bold'), style='Custom.TLabel').pack(pady=10)
         
         info_text = (
             "Version: 0.1\n"

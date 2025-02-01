@@ -25,10 +25,10 @@ pip install -r requirements.txt
 python3 file_name.py
 `
 or<br>
-``
-chmod +x file_name.py  
-./file_name.py
-``
+`
+chmod +x file_name.py`<br> 
+`./file_name.py
+`
 
 **requirements.txt**:
 

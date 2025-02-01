@@ -2,6 +2,10 @@
 
 A modern GUI python script to view Erik Dubois' latest YouTube videos via RSS feed.
 
+## Screenshot
+
+![image](https://github.com/user-attachments/assets/fd32ef8b-e2e6-4dd6-84b3-42a232134f43)
+
 ## Features
 - Dark theme UI
 - Video thumbnails
@@ -25,6 +29,4 @@ feedparser==6.0.10
 humanize==4.7.0
 Pillow==10.2.0
 
-## Screenshot
-
-![image](https://github.com/user-attachments/assets/fd32ef8b-e2e6-4dd6-84b3-42a232134f43)
+## More to come in the future :smiley:

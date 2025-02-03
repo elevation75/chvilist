@@ -15,6 +15,7 @@ CHANNEL_RSS = "https://www.youtube.com/feeds/videos.xml?channel_id=UCJdmdUp5BrsW
 MAX_ITEMS = 15
 THUMBNAIL_SIZE = (250, 162)
 GITHUB_URL = "https://github.com/elevation75/chvilist"
+GITLAB_URL = "https://gitlab.com/Elevati0n75/chvilist"
 COLORS = {
     'background': '#2D2D2D',
     'primary': '#383838',
@@ -28,7 +29,7 @@ class AboutWindow(Toplevel):
     def __init__(self, parent):
         super().__init__(parent)
         self.title("About")
-        self.geometry("450x280")
+        self.geometry("450x330")
         self.configure(background=COLORS['background'])
         self.resizable(False, False)
         self.create_widgets()
@@ -36,10 +37,10 @@ class AboutWindow(Toplevel):
     def create_widgets(self):
         main_frame = ttk.Frame(self, style='VideoFrame.TFrame')
         main_frame.pack(fill=BOTH, expand=True, padx=10, pady=10)
-        
+         
         ttk.Label(main_frame, text="CHVILIST", 
-                font=('Roboto', 12, 'bold'), style='Custom.TLabel').pack(pady=10)
-        
+                font=('Roboto', 30, 'bold'), style='Custom.TLabel').pack(pady=10)
+
         info_text = (
             "Version: 0.1\n"
             "Author: elevation75\n"
@@ -51,11 +52,20 @@ class AboutWindow(Toplevel):
         github_frame = ttk.Frame(main_frame, style='VideoFrame.TFrame')
         github_frame.pack(pady=15)
         ttk.Label(github_frame, text="More on GitHub Repository:", style='Custom.TLabel').pack(side=LEFT)
-        ttk.Button(github_frame, text="Open", command=lambda: webbrowser.open(GITHUB_URL),
-                 style='Accent.TButton').pack(side=LEFT, padx=10)
         
-        ttk.Button(main_frame, text="Close", command=self.destroy,
-                 style='Nav.TButton').pack(pady=10)
+        ttk.Button(github_frame, text="Open", command=lambda: webbrowser.open(GITHUB_URL),
+                   style='Accent.TButton').pack(side=LEFT, padx=10)
+
+        # GitLab Section (placed before the "Close" button)
+        gitlab_frame = ttk.Frame(main_frame, style='VideoFrame.TFrame')
+        gitlab_frame.pack(pady=15)
+        ttk.Label(gitlab_frame, text="More on GitLab Repository:", style='Custom.TLabel').pack(side=LEFT)
+        
+        ttk.Button(gitlab_frame, text="Open", command=lambda: webbrowser.open(GITLAB_URL),
+                   style='Accent.TButton').pack(side=LEFT, padx=10)
+
+        # Close Button
+        ttk.Button(main_frame, text="Close", command=self.destroy, style='Nav.TButton').pack(pady=10)
 
 class StyledVideoFrame(ttk.Frame):
     def __init__(self, parent, video, thumbnail_url):
